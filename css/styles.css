@@ -1,0 +1,168 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/*header style*/
+header{
+	height: 100px;
+	background-color: snow;
+	position: fixed;
+	width: 100%;
+}
+
+.logo{	
+	padding-left: 30px;
+	float: left;
+}
+
+.logo img{
+	width:90px;
+	height: 60px;
+}
+
+h2{
+	padding-left: 25px;
+	text-transform: uppercase;
+	color: grey;
+	/*font-family: 'Cormorant', serif;*/
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+ul{
+	list-style-type: none;
+	float: right;
+	padding-right: 20px;
+    
+}
+.lists li{
+	padding-right:10px; 
+	display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.lists a{
+	text-decoration: none;
+	color: black;
+	line-height: 100px;
+}
+
+#key{
+	visibility: hidden;
+	position: absolute;
+}
+
+.show, .hide{
+	display: none;
+	cursor: pointer;
+}
+/* header ends here*/
+/*styles for small devices*/
+@media screen and (max-width: 600px) {
+	.show,.hide{
+		display: block;
+	}
+
+	h2{
+		display: none;
+	}
+
+	.logo img{
+		height: 50px;
+		width: 50px;
+		margin-top: 18px;
+	}
+
+	.show{
+		float: right;
+		line-height: 100px;
+		padding-right: 20px;
+	}
+	.lists{
+		width: 100%;
+		right: -100%;
+		position: fixed;
+		transition: 0.6s;
+        background-color: snow;
+        text-align: center;
+        height: 15vh;
+        padding: 0px 0;
+        line-height: normal; 
+        top: 0;	
+	}
+
+	.lists li {
+		display: inline-block;
+	}
+
+	.hide{
+		position: absolute;
+		top: 40px;
+		right: 30px;
+	}
+
+	#key:checked~.lists{
+		right: 0;
+	}
+
+	main p{
+       padding: 20px;
+	}
+
+	h3{
+	   padding: 0;
+	   margin: : 0; 
+     }
+
+	.picha img{
+		width: 100px;
+		height: 300px;
+		
+	}
+}
+
+/* styles for small devices ends here*/
+
+h1{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h3{
+	padding-left: 100px;
+	padding-top: 40px; 
+}
+main{
+	background-color: snow;
+	font-family: 'Cormorant', serif;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.picha img{
+	width: 1350px; 
+	height: 600px;
+}
+
+p{
+	padding: 0 100px;
+}
+
+span{
+	color: blue;
+	cursor: pointer;
+	padding-left: 100px;
+}
+
+footer{
+	background-color: snow;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+footer ul{
+	display: flex;
+
+}
