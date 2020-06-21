@@ -1,128 +1,119 @@
 *{
 	box-sizing: border-box;
+	font-family: 'Saira Condensed', sans-serif;
 	margin: 0;
 	padding: 0;
 }
-/*header style*/
-header{
-	height: 100px;
-	background-color: snow;
-	position: fixed;
-	width: 100%;
-}
 
-.logo{	
-	padding-left: 30px;
-	float: left;
+header{
+	background-color: snow;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: fixed;
 }
 
 .logo img{
-	width:90px;
+	width: 120px;
 	height: 60px;
+	padding-left: 30px;
 }
 
-h2{
-	padding-left: 25px;
+.logo h2{
+	padding-left: 55px;
 	text-transform: uppercase;
 	color: grey;
 	/*font-family: 'Cormorant', serif;*/
     font-family: 'Saira Condensed', sans-serif;
 }
 
-ul{
+.items{
 	list-style-type: none;
-	float: right;
-	padding-right: 20px;
+    padding-right: 30px;
+    display: flex;
+    line-height: 100px;
+}
+
+.items li{
+	padding-right: 10px;
+	text-transform: uppercase;
     
 }
-.lists li{
-	padding-right:10px; 
-	display: inline-block;
-    text-transform: uppercase;
-    font-family: 'Saira Condensed', sans-serif;
-}
 
-.lists a{
+.items a{
 	text-decoration: none;
-	color: black;
-	line-height: 100px;
+	color: #444444;	
 }
 
-#key{
-	visibility: hidden;
+#checker{
 	position: absolute;
+	visibility: hidden;
 }
 
-.show, .hide{
+.open, .close{
 	display: none;
-	cursor: pointer;
 }
-/* header ends here*/
-/*styles for small devices*/
+
+.picha img{
+	width: 100%;
+	height: 600px;
+}
 @media screen and (max-width: 600px) {
-	.show,.hide{
+	.open,.close{
 		display: block;
+	}
+
+	.logo img{
+	   width: 70px;
+	   height: 30px;
+	   padding-left: 30px;
+	   margin-top: 20px;
+    }
+
+	.open{
+		float: right;
+		line-height: 80px;
+        padding-right: 30px;
+	}
+
+	.items{
+		width: 100%;
+		right: -100%;
+		position: fixed;
+		transition: 0.9s;
+        height: 10vh;
+        background-color: snow;
+        top:0;
+	}
+
+	.items {
+	    padding-left: 40px;
+
+    }
+
+	.close{
+		position: absolute;
+		top: -5px;
+		right: 20px;
+	}
+
+
+	#checker:checked~ .items{
+		right: 0;
 	}
 
 	h2{
 		display: none;
 	}
 
-	.logo img{
-		height: 50px;
-		width: 50px;
-		margin-top: 18px;
-	}
-
-	.show{
-		float: right;
-		line-height: 100px;
-		padding-right: 20px;
-	}
-	.lists{
-		width: 100%;
-		right: -100%;
-		position: fixed;
-		transition: 0.6s;
-        background-color: snow;
-        text-align: center;
-        height: 15vh;
-        padding: 0px 0;
-        line-height: normal; 
-        top: 0;	
-	}
-
-	.lists li {
-		display: inline-block;
-	}
-
-	.hide{
-		position: absolute;
-		top: 40px;
-		right: 30px;
-	}
-
-	#key:checked~.lists{
-		right: 0;
-	}
-
-	main p{
-       padding: 20px;
-	}
-
-	h3{
-	   padding: 0;
-	   margin: : 0; 
-     }
-
 	.picha img{
-		width: 100px;
 		height: 300px;
-		
 	}
-}
 
-/* styles for small devices ends here*/
+	div p{
+	padding: 0 30px;
+}
+}
 
 h1{
 	text-align: center;
@@ -135,34 +126,28 @@ h3{
 }
 main{
 	background-color: snow;
-	font-family: 'Cormorant', serif;
+	/*font-family: 'Cormorant', serif;*/
     font-family: 'Saira Condensed', sans-serif;
-}
-
-.picha img{
-	width: 1350px; 
-	height: 600px;
+    font-size: 18px;
+    word-spacing: px;
 }
 
 p{
 	padding: 0 100px;
 }
 
-span{
-	color: blue;
-	cursor: pointer;
-	padding-left: 100px;
-}
 
 footer{
 	background-color: snow;
 	height: 100px;
 	text-align: center;
-	line-height: 100px;
+	padding-top: 30px;
 }
 
-
-footer ul{
-	display: flex;
-
+footer a{
+	text-decoration: none;
+	color: black;
+}
+footer i{
+	padding: 5px;
 }
